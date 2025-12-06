@@ -21,7 +21,7 @@ int main() {
 
   // Entrada dos dados da Carta 1
   printf("=== Cadastro da Carta 1 ===\n");
-  printf("Digite o Estado (A-H): ");
+  printf("Digite o Estado (uma letra de A-H): ");
   scanf(" %c", &estado1);
 
   printf("Digite o Código da Carta (ex: A01): ");
