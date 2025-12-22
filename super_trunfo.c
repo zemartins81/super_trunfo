@@ -9,6 +9,8 @@ int main() {
   float area1;
   float pib1;
   int pontosTuristicos1;
+  float densidade1;
+  float pibPerCapita1;
 
   // Carta 2
   char estado2;
@@ -18,6 +20,10 @@ int main() {
   float area2;
   float pib2;
   int pontosTuristicos2;
+  float densidade2;
+  float pibPerCapita2;
+
+  char atributo[20];
 
   // Entrada dos dados da Carta 1
   printf("=== Cadastro da Carta 1 ===\n");
@@ -75,6 +81,12 @@ int main() {
   printf("PIB: %.2f bilhões de reais\n", pib1);
   printf("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
 
+  densidade1 = populacao1 / area1;
+  printf("Densidade Demográfica: %.2f pessoas/km²\n", densidade1);
+
+  pibPerCapita1 = pib1 / populacao1;
+  printf("PIB per capita: R$ %.2f \n", pibPerCapita1);
+
   printf("\n=== Carta 2 ===\n");
   printf("Estado: %c\n", estado2);
   printf("Código: %s\n", codigo2);
@@ -84,5 +96,58 @@ int main() {
   printf("PIB: %.2f bilhões de reais\n", pib2);
   printf("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
 
-  return 0;
+  densidade2 = populacao2 / area2;
+  printf("Densidade Demográfica: %.1f pessoas/k \n: ", densidade2);
+
+  pibPerCapita2 = pib2 / populacao2;
+  printf("PIB per capita: R$ %.2f \n", pibPerCapita2);
+
+  atributo = "população"
+
+  printf("O atributo escolhido para comparação foi \"%s\"\n", atributo);
+
+  if (atributo == "populacao") {
+    printf("Carta 1 - %s: %i \n", estado1, populacao1);
+    printf("Carta 2 - %s: %i\n", estado2, populacao2);
+
+    if (populacao1 > populacao2) {
+      printf("Carta 1 (%s) venceu!", estado1);
+    }else{
+      printf("Carta 2 (%s) venceu!", estado2);
+    }
+  }
+
+  if (atributo == "area") {
+
+    printf("Carta 1 - %s: %i \n", estado1, area1);
+    printf("Carta 2 - %s: %i\n", estado2, area2);
+
+     if (area1 > area2) {
+      printf("Carta 1 (%s) venceu!",
+        estado1);
+    } else {
+      printf("Carta 2 (%s) venceu!",
+             estado2);
+    }
+  }
+
+  if (atributo == "pib") {
+
+    printf("Carta 1 - %s: %i \n", estado1, pib1);
+    printf("Carta 2 - %s: %i\n", estado2, pib2);
+
+    if (pib1 > pib2) {
+      printf("Carta 1 (%s) venceu!",
+        estado1);
+    } else {
+      printf("Carta 2 (%s) venceu!",
+             estado2);
+    }
+  }
+
+  
+
+
+
+      return 0;
 }
